@@ -39,4 +39,9 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
   app.get("/", (req, res) => {
   res.send("Backend is running ✅");
+    app.post("/contact", (req, res) => {
+  const { name, email, message } = req.body;
+  // send email logic or store it
+  res.status(200).json({ message: "Message received!" });
 });
+
